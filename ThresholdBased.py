@@ -1,10 +1,17 @@
 import rasterio
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # File path for the provided GeoTIFF file
 # REPLACE with file name
-file_path = 's1a-iw-grd-vv-20241015t092718-20241015t092732-056111-06dda4-001-cog.tiff'
+file_path = os.getenv('FILE_PATH')
+
+# Validate the file path
+if not file_path or not os.path.exists(file_path):
+    raise ValueError(f"Invalid file path: {file_path}")
 
 def classify_soil_moisture(sar_data, thresholds):
     # Classify soil moisture levels from SAR backscatter using normalized thresholds.
