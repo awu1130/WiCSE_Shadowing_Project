@@ -1,0 +1,59 @@
+# after installing esa-snappy plugin, either create a python environment or use the following commands
+# instructions to install snappy: https://senbox.atlassian.net/wiki/spaces/SNAP/pages/2499051521/Configure+Python+to+use+the+SNAP-Python+esa_snappy+interface+SNAP+version+10
+'''
+import sys
+sys.path.append(r"<path>")
+import esa_snappy
+'''
+
+# sar_processing_snappy modules
+
+# MODULE                              # DESCRIPTION
+import matplotlib.colors as colors      # create visualizations
+import matplotlib.image as mpimg        # create visualizations
+import matplotlib.pyplot as plt         # create visualizations
+from termcolor import colored           # prints colored text
+from zipfile import ZipFile             # zip file manipulation
+from os.path import join                # data access in file manager  
+from glob import iglob                  # data access in file manager
+import pandas as pd                     # data analysis and manipulation
+import numpy as np                      # scientific computing
+import subprocess                       # external calls to system
+import esa_snappy                           # SNAP python interface
+import jpy                              # Python-Java bridge
+
+# sar_processing_planetary_computer modules 
+
+import pystac_client
+import planetary_computer
+import rioxarray
+import xarray as xr
+import rich.table
+from IPython.display import Image
+import pandas as pd
+import seaborn as sns
+import os
+import sarsen
+import adlfs
+import stackstac
+from scipy.ndimage import uniform_filter
+from scipy.ndimage import variance
+from skimage.filters import threshold_minimum
+import matplotlib.pyplot as plt
+
+import rasterio
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.ensemble import RandomForestRegressor
+
+# soil_moisture_estimation modules
+
+import earthaccess
+import h5py
+import numpy as np
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+from scipy.interpolate import griddata
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
